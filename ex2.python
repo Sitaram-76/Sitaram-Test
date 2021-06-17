@@ -1,0 +1,25 @@
+# Python program to explain os.path.join() method 
+import os
+path = "/home"
+
+print(os.path.join(path, "User/Desktop", "file.txt"))
+
+print ("------------------------------------------")
+
+path = "User/Documents"
+# /home is an absolute path 
+print(os.path.join(path, "/home", "file.txt"))
+
+print ("-------------------------------------------")
+#/User and /home both ae absolute but the preference is /home
+path = "/User"
+print(os.path.join(path, "Downloads", "file.txt", "/home"))
+
+print("------------------------------------------")
+
+path = "/home"
+# "" --> / will be added at the end
+print(os.path.join(path, "User/Public/", "Documents", ""))
+
+print("------------------------------------------")
+
